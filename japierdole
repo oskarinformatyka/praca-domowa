@@ -1,0 +1,32 @@
+import random
+bigword=""
+for raint in range(0,100):
+    ran=random.randint(0,1)
+    ranlen = random.randint(1,10)
+    for a in range(1,ranlen):
+        if ran==0: bigword+="A"
+        else: bigword+="B"
+print(bigword)
+
+#część 2 zadania !!
+zaczyna=0
+konczy=0
+lenmax=0
+length=0
+jakalit=""
+bigword="BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBAAAAAABBBBBBBBBBBBAAAABBBBBBBBBBAAAAAAAAABBBBBBBBBBBBAAAAAAAABBBAABBBBBBBBAAAAAAAAAAAAAAAAAABBBBBBBAAAAAAAAAABBBBBBBBBBBAAAAABBBBBBBBBBBBBBBAAAAAAAAAABBBAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAABBBBBBBAAAAAAAAABBBBBAAAAAAAAAAAAAAAAABBBBBBAAAABBBBAAAABBBBBBBBAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBABBBBBBBBBAAAAAAAAAABBBBBAAAAAABBBBBBBBBAAAAAAAAABBBBBBBBBBBBBBBBBBAAABBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAABBBBBBBBBBAAAAAAAAAAAAAABBAAAAAAAAAAABBBB"
+
+for l in range((len(bigword)-1)):
+    if bigword[l]==bigword[l-1]:
+        length+=1
+    elif bigword[l] != bigword[l-1]:
+        zaczyna = l
+        if length>lenmax:
+            konczy = l - 1
+            lenmax=length
+            jakalit=bigword[l-1]
+        length = 0
+print(zaczyna)
+print(konczy)
+print(lenmax)
+print(jakalit)
