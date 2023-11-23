@@ -1,0 +1,43 @@
+class Book:
+    def __init__(self,title,author,year):
+        self.title = title
+        self.author = author
+        self.year = year
+        self.is_available = True
+
+class Library:
+    pulka=[]
+    def __init__(self,pulka):
+        self.pulka=pulka
+
+    def add_book(self, ksionzka):
+        self.pulka.append(ksionzka)
+    def display_books(self):
+        for i in self.pulka:
+            print("--------------------------------")
+            print(self.i.title)
+            print(self.i.author)
+            print(self.i.year)
+            print(self.i.is_available)
+            print("--------------------------------")
+    def borrow_book(self, titel):
+        for i in self.pulka:
+            if i.title==titel:
+                i.is_available==False
+    def return_book(self, titel):
+        for i in self.pulka:
+            if i.title==titel:
+                i.is_available==True
+ksionrzeczka1=Book("ksionrzka pierwsza","pisaż pierwszy","1267")
+ksionrzeczka2=Book("ksionrzka druga","pisaż drugi","1675")
+ksionrzeczka3=Book("ksionrzka tżecia","pisaż tżeci","1644")
+
+bilbioteczka=Library([])
+bilbioteczka.add_book(ksionrzeczka1)
+bilbioteczka.add_book(ksionrzeczka2)
+bilbioteczka.add_book(ksionrzeczka3)
+bilbioteczka.display_books()
+bilbioteczka.borrow_book("ksionrzka pierwsza")
+bilbioteczka.display_books()
+bilbioteczka.return_book("ksionrzka pierwsza")
+bilbioteczka.display_books()
