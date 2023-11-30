@@ -1,0 +1,32 @@
+from enum import Enum
+import random
+
+class carBrand(Enum):
+    Volvo=1
+    BMW=2
+    Fiat=3
+
+class carType(Enum):
+    SUV=1
+    pickup=2
+    combi=3
+    hatchback=4
+    coupe=5
+
+class Car:
+
+    def __init__(self,brand, type, doors, is_electric, color, number_of_wheels):
+        self.brand=carBrand.(1,3)
+        self.doors = doors
+        self.is_electric = is_electric
+        self.color = color
+        self.number_of_wheels = number_of_wheels
+
+    def __str__(self):
+        return f"Doors: {self.doors}, color: {self.color}, Wheels: {self.number_of_wheels}, Electric: {self.is_electric}, "
+
+    def buildNew(self):
+        self.doors = 4
+        self.is_electric = False
+        self.color = "Caribbean Islet"
+        self.number_of_wheels = 4
